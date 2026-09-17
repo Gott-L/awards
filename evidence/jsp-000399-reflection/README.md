@@ -105,6 +105,12 @@ For each fixed $k>2$, the sufficiently-large-$n$ uniqueness theorem was proved b
 3. hjyuh, `erdos_494.variants.card_eq_2k`, commit `e0da6ec78953b17618895a093d4bee90fd3f6f67`, 12 March 2026. [Pinned prior Lean proof](https://github.com/hjyuh/formal-conjectures/blob/e0da6ec78953b17618895a093d4bee90fd3f6f67/FormalConjectures/ErdosProblems/494.lean#L916); [upstream proof-link registration and build statement](https://github.com/google-deepmind/formal-conjectures/pull/3525).
 4. [Erdős problem 494](https://www.erdosproblems.com/494) and [its statement and references](https://www.erdosproblems.com/latex/494).
 
+## Contributions
+
+- **Gott-L:** project concept and initiation, overall objectives and research direction, and authorization and ownership of the submission.
+- **OpenAI Codex, working under Gott-L's instructions:** candidate research, construction of the displayed witnesses, Lean implementation, documentation, and computational and formal cross-checks.
+- **Prior mathematical and formalization authors:** credited above; project leadership is not a claim of priority for their results.
+
 ## License
 
 The newly written Lean sources, verification script, and build configuration are licensed under [MIT](LICENSE). Prose and review/verification records are under [CC BY 4.0](LICENSE-CONTENT), consistent with the parent repository's content license. Cited third-party works retain their original rights; no third-party proof source is included.
