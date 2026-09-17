@@ -1,0 +1,45 @@
+{
+  "compiler": "Lean (version 4.19.0, x86_64-w64-windows-gnu, commit 6caaee842e94, Release)",
+  "fresh_temporary_directory": true,
+  "external_libraries": [],
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "source_file": "Jsp399.lean",
+      "source_sha256": "1a6e24bbc1f9589f1b23c113e0824a4d9d9dd6290c5d0432c4cf51b7cdf9fb26",
+      "source_bytes": 4908,
+      "command": "lean -DwarningAsError=true -o Jsp399.olean Jsp399.lean",
+      "exit_code": 0,
+      "axiom_audit_passed": true,
+      "output": "'JSP399.triples_complete' depends on axioms: [propext]\n'JSP399.triples_nodup' depends on axioms: [propext]\n'JSP399.base_same_sums' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399.counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399.different_translations' depends on axioms: [propext, Quot.sound]\n'JSP399.arbitrarily_large_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "source_file": "ReflectionCore.lean",
+      "source_sha256": "4bc8812ac702bad9f6cd6bd21cc7780faedf3f19753f7d33bd8807227c321c74",
+      "source_bytes": 10523,
+      "command": "lean -DwarningAsError=true -o ReflectionCore.olean ReflectionCore.lean",
+      "exit_code": 0,
+      "axiom_audit_passed": true,
+      "output": "'ReflectionCore.half_size_reflection_bijection' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ReflectionCore.mask_representation' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "source_file": "ReflectionConstruction.lean",
+      "source_sha256": "7f304bd4fdfed3f7a0bd43a2950033eea2e5110356ede7706c7e3126084d9c13",
+      "source_bytes": 4948,
+      "command": "lean -DwarningAsError=true -o ReflectionConstruction.olean ReflectionConstruction.lean",
+      "exit_code": 0,
+      "axiom_audit_passed": true,
+      "output": "'JSP399General.source_sum' depends on axioms: [propext, Quot.sound]\n'JSP399General.source_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399General.reflection_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "source_file": "Jsp399General.lean",
+      "source_sha256": "3ccea78b91f2884c685dbe12bd6ba54a590058250f50a546973ef9a897fcd3b8",
+      "source_bytes": 4169,
+      "command": "lean -DwarningAsError=true -o Jsp399General.olean Jsp399General.lean",
+      "exit_code": 0,
+      "axiom_audit_passed": true,
+      "output": "'JSP399General.exact_subset_encoding' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399General.explicit_complement_bijection' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399General.general_half_sum_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP399General.exists_general_half_sum_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    }
+  ],
+  "limitations": "Same Lean distribution and kernel; not an independent kernel implementation or official prize verification."
+}

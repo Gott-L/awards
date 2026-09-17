@@ -1,0 +1,15 @@
+name = "jsp399_reflection"
+version = "0.1.0"
+defaultTargets = ["Jsp399", "Jsp399General"]
+
+[[lean_lib]]
+name = "Jsp399"
+
+[[lean_lib]]
+name = "ReflectionCore"
+
+[[lean_lib]]
+name = "ReflectionConstruction"
+
+[[lean_lib]]
+name = "Jsp399General"
