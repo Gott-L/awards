@@ -1,6 +1,6 @@
-# Gott-L: eight scoped Lean formalization contributions
+# Gott-L: nine scoped Lean formalization contributions
 
-This evidence submission gathers eight completed formal results across seven catalogue entries. Each packet preserves its exact theorem, prior-work disclosures, pinned dependencies, fresh verification record and reproduction instructions. The requested assessment concerns the actual formalization contributions. No packet is presented as resolving every formulation of its broader catalogue problem.
+This evidence submission gathers nine completed formal results across eight catalogue entries. Each packet preserves its exact theorem, prior-work disclosures, pinned dependencies, fresh verification record and reproduction instructions. The requested assessment concerns the actual formalization contributions. No packet is presented as resolving every formulation of its broader catalogue problem.
 
 ## Contributions and exact boundaries
 
@@ -14,8 +14,9 @@ This evidence submission gathers eight completed formal results across seven cat
 | JSP-000883 / Erdős 1063, additional endpoint | For every ε>0, eventually an actual unique-exception witness satisfies n≤exp(εk); the actual minimum has log(n_k)=o(k) and log(n_k)/k→0 | Sharp growth order, exact values, mathematical discovery, and priority for the improved-upper target already formalized in PR601 | [Proof and checks](jsp-000883-subexponential/README.md) |
 | JSP-000847 / Erdős 1017 | Complete classical Erdős–Goodman–Pósa theorem: every finite simple graph has an exact edge partition into at most floor(n²/4) edges and triangles, including empty graphs and isolated vertices | The open dense-graph improvement, mathematical discovery, global first priority and award eligibility | [Proof and checks](jsp-000847-egp-partition/README.md) |
 | JSP-000791 / Erdős 951 | Every finite strictly increasing prefix above one with complete exponent-vector product separation extends to an infinite sequence preserving that prefix and separation; valid new generators exist above every cutoff | The original eventual prime-counting conjecture, near-optimal numerical certificates, mathematical discovery, global first priority and award eligibility | [Proof and checks](jsp-000791-prefix-extension/README.md) |
+| JSP-000279 / Erdős 336 | Complete classical Erdős–Graham characterization: a bounded-summand asymptotic basis has a least fixed exact order iff its differences have gcd one, including the strictly increasing sequence/consecutive-difference version | The extremal-limit question, optimal quantitative order bounds, mathematical discovery, global first priority and award eligibility | [Proof and checks](jsp-000279-exact-order-criterion/README.md) |
 
-The 149 file blobs in the first seven evidence packets remain unchanged. The eighth packet adds 25 files, and this index records the expanded scope. Each mathematical package is reproducible separately. No catalogue, candidate, award, recipient-confirmation or payment record is changed.
+The 174 file blobs in the first eight evidence packets remain unchanged. The ninth mathematical packet adds 24 files. A separate 45-file external-checker supplement strengthens verification of the existing JSP-000399 packet and is not counted as another mathematical contribution. Each mathematical package is reproducible separately. No catalogue, candidate, award, recipient-confirmation or payment record is changed.
 
 ## Review request and prior work
 
@@ -29,9 +30,11 @@ For the seventh packet, the mathematical theorem is credited to Erdős, Goodman 
 
 For the eighth packet, the known finite-prefix extension argument is credited to Barreto–Price and Patrick White with Claude, with the source-access limits stated in the packet. The new implementation uses summable geometric weights and outer-measure bounds to construct a valid next generator, then iterates while preserving every old coordinate. The complete exponent-vector separation condition is retained. PR670's different three-generator lower bound is credited but its code is not reused. The catalogue's eligibility field is unchanged.
 
+For the ninth packet, the mathematical characterization is credited to Erdős and Graham (1980). The proof derives actual finite equal-sum representations of adjacent lengths from the full common-divisor condition, then proves uniform padding and least-order existence. It includes both directions and the original sequence formulation. The distinct example in PR660 and the extensive plby E336 extremal-limit development are explicitly acknowledged; no source code from them is reused. The catalogue's eligibility field is unchanged. See [sources and scope](jsp-000279-exact-order-criterion/SOURCES.md).
+
 ## Verification
 
-The eight packets contain forty-eight proof modules. Their recorded fresh compilations and per-packet axiom audits all passed: respectively 18, 10, 28, 20, 54, 86, 25 and 38 named declaration checks. Only standard logical axioms are permitted. Each package records its own exact statement checks and source hashes; seven packages use the pinned Mathlib 4.19 dependency cache and the first uses bundled Std.
+The nine mathematical packets contain fifty-three proof modules. Their recorded fresh compilations and per-packet axiom audits all passed: respectively 18, 10, 28, 20, 54, 86, 25, 38 and 34 named declaration checks. Only standard logical axioms are permitted. Each package records its own exact statement checks and source hashes; eight packages use the pinned Mathlib 4.19 dependency cache and the first uses bundled Std.
 
 The fifth packet also passed a separate fresh replay by a same-team agent that did not write its seven proof modules: fifteen independently transcribed statements and 93 named audits. Its T is explicitly encoded as unordered pairs of equal edges sharing a unique vertex.
 
@@ -41,7 +44,17 @@ The seventh packet passed fresh compilation of seven modules, 25 named declarati
 
 The eighth packet passed fresh compilation of seven modules, 38 selected named declaration audits and six explicit statement checks. Its separate internal replay passed 12 independently transcribed statements and 51 audits, including one additional named source helper already present in the main endpoints' dependency closure. Its reviewer authored the append and sequence modules; the other five modules were written by other agents. The checks include product injectivity, finite-support equality, unconditional avoidance and extension, and the empty-prefix and zero-vector cases.
 
+The ninth packet passed fresh compilation of five modules, all 34 named public declaration audits and eight explicit statement/edge-case checks. A separate internal replay passed 12 independently transcribed checks and 46 audits (34 source declarations plus 12 review declarations), with all nine dependency revisions and tracked-source cleanliness checked. Its reviewer authored the definitions, padding and necessity modules and reviewed the other two modules. An additional same-team non-author mathematical review found no weakened premise or missing finite-certificate argument. Both reviewer roles and dependency-cache trust are disclosed.
+
 Internal reviews disclose the reviewers' participation in development. They are not official verification, independent human review, or separate implementations of the Lean kernel. Pinned dependency-cache trust is disclosed. Earlier packets' sources and internal evidence remain unchanged.
+
+## Separately implemented checker: JSP-000399
+
+The [external-checker supplement](jsp-000399-external-check/README.md) records an actual successful Nanoda run for ten explicit endpoints and semantic bridges of the unchanged five-parameter packet, accepting 2,882 declarations. These include the complete coefficient identity, uniform parameter and translation results, the positive distinct example, enumeration completeness/nonduplication, and displayed-example bridges.
+
+The checker source was unmodified at `ammkrn/nanoda_lib@4c544ed4099c8227f07d5de77ad1e69fb0740a27`. The exporter was explicitly adapted to Lean 4.19 and seven string literals were expanded into kernel-checked ordinary constructors. Its changes, source hashes, exact input/binary hashes, statements, successful logs, and both deliberately invalid controls are included. The wrong-proof and unpermitted-axiom controls both target `JSP399Parametric.vector_triple_sums_perm` and failed for their expected reasons.
+
+This is an independent checker implementation operated by the same team. It checks this one mathematical packet, not the other eight; it is not independent human review or official verification. The new optional native-host replay convenience wrapper is marked as prepared but not run end-to-end; the successful evidence comes from the archived actual operator scripts and records.
 
 ## Attribution
 
@@ -57,5 +70,8 @@ Gott-L proposed and initiated the project, set the objectives, planning and rese
 - JSP-000883, subexponential upper bound: [0bf84f8331887182b61c878f782072ec6d755db2](https://github.com/Gott-L/awards/commit/0bf84f8331887182b61c878f782072ec6d755db2).
 - JSP-000847, complete EGP edge partition: [d403cf24e4278a0ec7ed2a4a4698363772a2fcf7](https://github.com/Gott-L/awards/commit/d403cf24e4278a0ec7ed2a4a4698363772a2fcf7).
 - JSP-000791, complete finite-prefix extension: [1d0ab6b38db675f827ba5b7bc9f503800ddee5b0](https://github.com/Gott-L/awards/commit/1d0ab6b38db675f827ba5b7bc9f503800ddee5b0).
+
+- JSP-000279, complete exact-order criterion: [0f09fd66cea993c12bb2e61225d32ff8348f518e](https://github.com/Gott-L/awards/commit/0f09fd66cea993c12bb2e61225d32ff8348f518e).
+- Verification supplement for existing JSP-000399 (not a new mathematical packet): [f10b19b88dcaf7187eb3a27fd4727e3324233ff2](https://github.com/Gott-L/awards/commit/f10b19b88dcaf7187eb3a27fd4727e3324233ff2).
 
 The individual commits remain available for separate review if the maintainers prefer that organization. This index is licensed CC BY 4.0; packet-specific licenses and notices remain unchanged. Private contact, identity and payment details are excluded.
