@@ -1,6 +1,6 @@
-# Gott-L: seven scoped Lean formalization contributions
+# Gott-L: eight scoped Lean formalization contributions
 
-This evidence submission gathers seven completed formal results across six catalogue entries. Each packet preserves its exact theorem, prior-work disclosures, pinned dependencies, fresh verification record and reproduction instructions. The requested assessment concerns the actual formalization contributions. No packet is presented as resolving every formulation of its broader catalogue problem.
+This evidence submission gathers eight completed formal results across seven catalogue entries. Each packet preserves its exact theorem, prior-work disclosures, pinned dependencies, fresh verification record and reproduction instructions. The requested assessment concerns the actual formalization contributions. No packet is presented as resolving every formulation of its broader catalogue problem.
 
 ## Contributions and exact boundaries
 
@@ -13,8 +13,9 @@ This evidence submission gathers seven completed formal results across six catal
 | JSP-000904 / Erdős 1087 | Exact equal-distance four-point counting identities, the universal planar comparison F≤W≤10F, and an exact four-point example attaining 10 | The original open asymptotic exponent, general isosceles bounds, and the external analytic estimates | [Proof and checks](jsp-000904-distance-counting/README.md) |
 | JSP-000883 / Erdős 1063, additional endpoint | For every ε>0, eventually an actual unique-exception witness satisfies n≤exp(εk); the actual minimum has log(n_k)=o(k) and log(n_k)/k→0 | Sharp growth order, exact values, mathematical discovery, and priority for the improved-upper target already formalized in PR601 | [Proof and checks](jsp-000883-subexponential/README.md) |
 | JSP-000847 / Erdős 1017 | Complete classical Erdős–Goodman–Pósa theorem: every finite simple graph has an exact edge partition into at most floor(n²/4) edges and triangles, including empty graphs and isolated vertices | The open dense-graph improvement, mathematical discovery, global first priority and award eligibility | [Proof and checks](jsp-000847-egp-partition/README.md) |
+| JSP-000791 / Erdős 951 | Every finite strictly increasing prefix above one with complete exponent-vector product separation extends to an infinite sequence preserving that prefix and separation; valid new generators exist above every cutoff | The original eventual prime-counting conjecture, near-optimal numerical certificates, mathematical discovery, global first priority and award eligibility | [Proof and checks](jsp-000791-prefix-extension/README.md) |
 
-The 124 file blobs in the first six evidence packets remain unchanged. The seventh packet adds 25 files, and this index records the expanded scope. Each mathematical package is reproducible separately. No catalogue, candidate, award, recipient-confirmation or payment record is changed.
+The 149 file blobs in the first seven evidence packets remain unchanged. The eighth packet adds 25 files, and this index records the expanded scope. Each mathematical package is reproducible separately. No catalogue, candidate, award, recipient-confirmation or payment record is changed.
 
 ## Review request and prior work
 
@@ -26,15 +27,19 @@ For the sixth packet, the subexponential mathematics is already public in Patric
 
 For the seventh packet, the mathematical theorem is credited to Erdős, Goodman and Pósa (1966). The inspected PR600 proves sharpness but explicitly excludes the universal upper bound; the other inspected same-name artifacts do not close that theorem. The new proof constructs the entire partition and discharges its matching and induction premises. Its bounded source search is not a global priority certificate. The catalogue’s “Eligible to claim: No” field is preserved, and this request concerns assessment of the formalization contribution.
 
+For the eighth packet, the known finite-prefix extension argument is credited to Barreto–Price and Patrick White with Claude, with the source-access limits stated in the packet. The new implementation uses summable geometric weights and outer-measure bounds to construct a valid next generator, then iterates while preserving every old coordinate. The complete exponent-vector separation condition is retained. PR670's different three-generator lower bound is credited but its code is not reused. The catalogue's eligibility field is unchanged.
+
 ## Verification
 
-The seven packets contain forty-one proof modules. Their recorded fresh compilations and per-packet axiom audits all passed: respectively 18, 10, 28, 20, 54, 86 and 25 named declaration checks. Only standard logical axioms are permitted. Each package records its own exact statement checks and source hashes; six packages use the pinned Mathlib 4.19 dependency cache and the first uses bundled Std.
+The eight packets contain forty-eight proof modules. Their recorded fresh compilations and per-packet axiom audits all passed: respectively 18, 10, 28, 20, 54, 86, 25 and 38 named declaration checks. Only standard logical axioms are permitted. Each package records its own exact statement checks and source hashes; seven packages use the pinned Mathlib 4.19 dependency cache and the first uses bundled Std.
 
 The fifth packet also passed a separate fresh replay by a same-team agent that did not write its seven proof modules: fifteen independently transcribed statements and 93 named audits. Its T is explicitly encoded as unordered pairs of equal edges sharing a unique vertex.
 
 The sixth packet passed ten primary statement checks and a separate fresh replay of all eleven modules, twelve independently transcribed statements and 98 named audits. Its reviewer ported the inherited finite modules but did not write the new prime-count, parameter, asymptotic or minimum proofs. The checks verify actual witnesses, nonemptiness, the literal natural infimum and the order of quantifiers in the subexponential conclusion.
 
 The seventh packet passed fresh compilation of seven modules, 25 named declaration audits and four explicit statement checks. A separate internal replay passed eight independently transcribed statement checks and 33 audits, including the complete endpoint for arbitrary finite simple graphs and unique ownership of every edge; details are recorded in [its review receipt](jsp-000847-egp-partition/review-a/receipt.json). Its reviewer authored the matching module and reviewed the other components. No assumed partition or matching remains in the final theorem.
+
+The eighth packet passed fresh compilation of seven modules, 38 selected named declaration audits and six explicit statement checks. Its separate internal replay passed 12 independently transcribed statements and 51 audits, including one additional named source helper already present in the main endpoints' dependency closure. Its reviewer authored the append and sequence modules; the other five modules were written by other agents. The checks include product injectivity, finite-support equality, unconditional avoidance and extension, and the empty-prefix and zero-vector cases.
 
 Internal reviews disclose the reviewers' participation in development. They are not official verification, independent human review, or separate implementations of the Lean kernel. Pinned dependency-cache trust is disclosed. Earlier packets' sources and internal evidence remain unchanged.
 
@@ -51,5 +56,6 @@ Gott-L proposed and initiated the project, set the objectives, planning and rese
 - JSP-000904: [b21109ece19bcc8b18b9646567dfc6d5ac088d21](https://github.com/Gott-L/awards/commit/b21109ece19bcc8b18b9646567dfc6d5ac088d21).
 - JSP-000883, subexponential upper bound: [0bf84f8331887182b61c878f782072ec6d755db2](https://github.com/Gott-L/awards/commit/0bf84f8331887182b61c878f782072ec6d755db2).
 - JSP-000847, complete EGP edge partition: [d403cf24e4278a0ec7ed2a4a4698363772a2fcf7](https://github.com/Gott-L/awards/commit/d403cf24e4278a0ec7ed2a4a4698363772a2fcf7).
+- JSP-000791, complete finite-prefix extension: [1d0ab6b38db675f827ba5b7bc9f503800ddee5b0](https://github.com/Gott-L/awards/commit/1d0ab6b38db675f827ba5b7bc9f503800ddee5b0).
 
 The individual commits remain available for separate review if the maintainers prefer that organization. This index is licensed CC BY 4.0; packet-specific licenses and notices remain unchanged. Private contact, identity and payment details are excluded.
