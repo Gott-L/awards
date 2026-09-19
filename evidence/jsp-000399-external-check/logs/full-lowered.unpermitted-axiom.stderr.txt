@@ -1,3 +1,0 @@
-Error: export file declares unpermitted axiom "JSP399Parametric.vector_triple_sums_perm"
-
-run with `-h` or `--help` for help

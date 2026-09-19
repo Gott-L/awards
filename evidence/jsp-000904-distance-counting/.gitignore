@@ -1,6 +1,0 @@
-.lake/
-__pycache__/
-*.olean
-*.ilean
-incidence-a-*/
-full-replay-*/

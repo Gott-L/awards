@@ -1,6 +1,0 @@
-.lake/
-.cache/
-.curl/
-__pycache__/
-*.olean
-*.ilean
